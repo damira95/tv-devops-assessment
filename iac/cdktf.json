@@ -1,0 +1,6 @@
+{
+  "language": "typescript",
+  "app": "npx ts-node main.ts",
+  "projectId": "tv-assessment-iac",
+  "sendCrashReports": "false"
+}

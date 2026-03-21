@@ -1,0 +1,7 @@
+node_modules
+cdktf.out
+*.js
+.terraform
+terraform.tfstate
+terraform.tfstate.backup
+.crash.log

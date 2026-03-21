@@ -1,14 +1,16 @@
 {
   "name": "express-ts-app",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "TurboVets DevOps assessment app",
+  "main": "dist/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "ts-node-dev --respawn --transpile-only src/server.ts"
+    "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "test": "echo \"No tests configured\""
   },
   "keywords": [],
-  "author": "",
+  "author": "Damirakan",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {

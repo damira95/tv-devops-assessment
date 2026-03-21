@@ -1,0 +1,33 @@
+{
+  "name": "tv-assessment-iac",
+  "version": "1.0.0",
+  "description": "TurboVets DevOps assessment infrastructure",
+  "main": "main.ts",
+  "scripts": {
+    "build": "tsc",
+    "synth": "cdktf synth",
+    "deploy": "cdktf deploy --auto-approve",
+    "destroy": "cdktf destroy --auto-approve"
+  },
+  "keywords": [
+    "cdktf",
+    "aws",
+    "ecs",
+    "ecr",
+    "devops"
+  ],
+  "author": "Damirakan",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@cdktf/provider-aws": "^21.22.1",
+    "cdktf": "^0.21.0",
+    "constructs": "^10.5.1"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "cdktf-cli": "^0.21.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
