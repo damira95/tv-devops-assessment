@@ -22,9 +22,13 @@ It provisions a **production-ready AWS environment** using CDK for Terraform and
 
 ## 📁 Project Structure
 
-.
-├── app/        # Node.js application (Dockerized)
-├── iac/        # Infrastructure as Code (CDKTF)
+├── app/        
+│   ├── src/
+│   ├── Dockerfile
+│   └── docker-compose.yml
+├── iac/        
+│   ├── main.ts
+│   └── cdktf.json
 └── README.md
 
 
