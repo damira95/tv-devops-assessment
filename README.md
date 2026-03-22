@@ -4,7 +4,7 @@ This project demonstrates a **full DevOps lifecycle implementation** including c
 
 It provisions a **production-ready AWS environment** using CDK for Terraform and deploys a containerized Node.js application on ECS Fargate behind an Application Load Balancer.
 
-______________________________________________
+
 
 ## 🧩 Architecture Overview
 
@@ -18,7 +18,7 @@ ______________________________________________
 - **Logging:** CloudWatch Logs
 - **CI/CD:** GitHub Actions
 
-______________________________________
+
 
 ## 📁 Project Structure
 
@@ -27,7 +27,7 @@ ______________________________________
 ├── iac/     # Infrastructure as Code (CDKTF)
 └── README.md
 
-__________________________________
+
 
 ## 🐳 Local Development
 
@@ -35,15 +35,15 @@ __________________________________
 
 ```bash
 cd app
-docker-compose up --build
-__________________________________
-Health Check
+docker compose up --build
+
+###Health Check
 
 After starting the application:
 http://localhost:3000/health
 Expected response:
 {"status":"ok"}
-_________________________________
+
 ☁️ AWS Deployment
 Requirements
 
@@ -56,17 +56,17 @@ export AWS_REGION=us-east-1
 export APP_NAME=tv-assessment-app
 export CONTAINER_PORT=3000
 export IMAGE_TAG=latest
-______________
-Deploy
+
+###Deploy
 
 cd iac
 npm install
 cdktf deploy
-________________
-Destroy
+
+###Destroy
 
 cdktf destroy
-_________________________
+
 🔄 CI/CD
 
 GitHub Actions pipeline:
@@ -74,19 +74,20 @@ Trigger: push to main
 Build Docker image
 Push to ECR
 Deploy via CDKTF
-__________________________
+
 🔐 Required GitHub Secrets
 
 AWS_ACCESS_KEY_ID
 AWS_SECRET_ACCESS_KEY
 AWS_REGION
 ECR_URI
-_____________________
+
 🌐 Output
 
-After deployment:
+After deployment, the application will be publicly доступен at:
+
 http://<ALB_DNS>/health
-____________________
+
 
 🧠 Design Decisions
 	•	ECS Fargate for serverless container management
@@ -94,7 +95,7 @@ ____________________
 	•	CDKTF for type-safe infrastructure
 	•	Environment variables for portability
 	•	IAM roles follow least privilege principle
-_____________________
+
 
 ⚙️ Key Features
 	•	Multi-stage Docker build (optimized image size)
